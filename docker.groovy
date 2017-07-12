@@ -1,4 +1,4 @@
-// Docker Pipeline Plugin shoul be installed
+// Docker Pipeline Plugin should be installed
 node('jenkins-slave') {
 // Previously Nexus private docker registry was configured.
 def nexusRegistry = "nexus.flylab.local:8082"
