@@ -15,7 +15,7 @@ stage 'Push image to Nexus private registry'
 
 stage 'Docker container running'
     sh 'docker rm -f tomcat || true'
-// Assumes the existence of nginx reverse proxy and ci_default network.
+// Assumes the existence of nginx reverse proxy in ci_default network.
     tomcatImg.run ("--rm --name tomcat -p 8888:8080 --link nginx:nginx --net ci_default")
     }
   }
